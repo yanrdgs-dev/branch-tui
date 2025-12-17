@@ -13,4 +13,4 @@ branch-tui = "branch_tui.app:run"
 package = true
 
 [tool.setuptools.package-data]
-"branch-tui" = ["*.tcss"]
+"branch_tui" = ["*.tcss"]

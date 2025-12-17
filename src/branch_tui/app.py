@@ -123,7 +123,7 @@ class MainScreen(Screen):
                 ("Created and switched to branch ", (f"{branch_name}", "bold green")),
                 " successfully.",
             )
-            self.app.exit()
+            self.app.exit(message=msg)
         except Exception as e:
             self.query_one("#status-bar").update(
                 f"[red]Error creating branch: {str(e)}"

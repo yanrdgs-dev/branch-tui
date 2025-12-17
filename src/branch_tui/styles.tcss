@@ -1,0 +1,47 @@
+#main-container {
+    padding: 1 2;
+    background: $surface;
+}
+
+#title {
+    text-align: center;
+    text-style: bold;
+    margin-bottom: 1;
+    color: $accent;
+}
+
+ListView {
+    border: round $primary; 
+    background: $surface;
+    height: 1fr;
+    margin-top: 1;
+}
+
+ListItem {
+    padding: 1;
+    border-bottom: solid $primary-darken-2; 
+}
+
+ListItem:focus {
+    background: $accent;
+    color: $text;
+    text-style: bold;
+}
+
+.label-line {
+    color: $text-muted;
+    margin-left: 7;
+}
+
+#status-bar {
+    background: $panel;
+    color: $text-muted;
+    padding: 0 1;
+    margin-top: 1;
+    height: 1;
+}
+
+#search-box {
+    margin: 0 0 1 0;
+    border: tall $primary;
+}

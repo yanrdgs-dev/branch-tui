@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+from rich.text import Text
 from textual import work
 from textual.app import App, ComposeResult
 from textual.containers import Center, Vertical
@@ -118,9 +119,11 @@ class MainScreen(Screen):
 
         try:
             create_branch(branch_name)
-            self.app.exit(
-                message=f"Created and switched to branch [b cyan]{branch_name}[/b cyan] successfully."
+            msg = Text.assemble(
+                ("Created and switched to branch ", (f"{branch_name}", "bold green")),
+                " successfully.",
             )
+            self.app.exit()
         except Exception as e:
             self.query_one("#status-bar").update(
                 f"[red]Error creating branch: {str(e)}"

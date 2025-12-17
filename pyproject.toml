@@ -1,5 +1,5 @@
 [project]
-name = "branch_tui"
+name = "branch-tui"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -7,10 +7,10 @@ requires-python = ">=3.12"
 dependencies = ["httpx>=0.28.1", "textual>=6.10.0"]
 
 [project.scripts]
-branch_tui = "branch_tui.app:run"
+branch-tui = "branch_tui.app:run"
 
 [tool.uv]
 package = true
 
 [tool.setuptools.package-data]
-"branch_tui" = ["*.tcss"]
+"branch-tui" = ["*.tcss"]
